@@ -16,6 +16,7 @@ const LayoutStyled = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
+    height: 10dvh;
     nav{
         text-align: center;
         padding: 10px 15px 10px 15px;
