@@ -7,25 +7,29 @@ interface SectionProps {
   fontSize?: 2;
   fontColor?: string;
   children: any;
+  className?: string
 }
 
-const SectionStyled = styled.div``;
+const SectionStyled = styled.div`
+  @media only screen and (max-width: 600px) {
+  }
+`;
 
 const Section: React.FC<SectionProps> = ({
   title,
   fontSize,
   fontColor,
   children,
+  className
 }) => {
   return (
-    <SectionStyled>
+    <SectionStyled className={className}>
       {fontColor ? (
         <Title text={title} fontSize={fontSize} fontColor={fontColor} />
       ) : (
         <Title text={title} fontSize={fontSize} />
       )}
-
-      {children}
+      <div className="secChildren">{children}</div>
     </SectionStyled>
   );
 };
@@ -34,7 +38,7 @@ Section.defaultProps = {
   title: "",
   fontSize: 2,
   fontColor: "",
-  children: null
+  children: null,
 };
 
 export default Section;

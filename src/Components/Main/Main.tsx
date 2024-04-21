@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Section from "../Misc/Section";
+import { motion, useIsPresent } from "framer-motion";
 
 const MainStyled = styled.div`
-  height: calc(100vh - 160px);
+  height: calc(100vh - 180px);
   overflow-y: scroll;
   overflow-x: hidden;
   grid-area: main;
+  position: relative;
   padding: 75px 0px 0px 2vw;
 
   /* width */
@@ -77,18 +79,79 @@ const MainStyled = styled.div`
     .experienceItemDescriptionSecondLevel {
       padding: 0px 0px 0px 18px;
     }
+
+    .privacy-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--accent);
+      z-index: 2;
+    }
+  }
+  .screenChangeDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #d7d7d7;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .screenChangeDiv::after {
+    background-color: transparent;
+  }
+
+  @media only screen and (max-width: 600px) {
+    height: 90vh;
+    padding: 50px 25px 50px 25px;
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #d7d7d7;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #9f9f9f;
+    }
+
+    & > div > div:first-child {
+      text-align: center;
+    }
+    & > div::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #36363e;
+  }
   }
 `;
 
 function Main() {
+  const isPresent = useIsPresent();
   return (
     <MainStyled>
+      <motion.div
+        initial={{ scaleX: 1 }}
+        animate={{
+          scaleX: 0,
+          transition: { duration: 0.7, ease: "circInOut" },
+        }}
+        style={{ originX: isPresent ? 0 : 1 }}
+        className="screenChangeDiv"
+      />
       <Section title="About me" fontSize={2} fontColor={"#36363e"}>
         <div className="aboutMeSection">
-          Novice Full Stack developer specializing in C# and JS. <br /> Passionate
-          about using new technology and constant improvement. Currently I am
-          focusing on getting to know .NET in depth. My other hobbies are
-          origami, cycling and ants.
+          Novice Full Stack developer specializing in C# and JS. <br />{" "}
+          Passionate about using new technology and constant improvement.
+          Currently I am focusing on getting to know .NET in depth. My other
+          hobbies are origami, cycling and ants.
         </div>
       </Section>
       <Section title="Experience" fontSize={2} fontColor={"#36363e"}>
@@ -194,44 +257,6 @@ function Main() {
       <Section title="Pet Projects" fontSize={2} fontColor={"#36363e"}>
         123
       </Section>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </MainStyled>
   );
 }

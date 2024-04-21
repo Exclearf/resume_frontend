@@ -14,6 +14,17 @@ const HeaderStyled = styled.div`
     align-items: start;
     flex-direction: column;
   }
+
+  @media only screen and (max-width: 600px) {
+    padding-left: 0;
+    justify-content: center;
+    height: 20vh;
+
+    .floatLeft{
+      justify-content: center;
+      align-items: center;
+    }
+  }
 `;
 
 function Header() {
