@@ -88,7 +88,7 @@ const SideStyled = styled.div`
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      height: 80vh;
+      height: 80dvh;
       border-bottom: 1px #36363e solid;
     }
 
