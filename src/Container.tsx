@@ -5,7 +5,10 @@ import Side from "./Components/Side/Side";
 import Main from "./Components/Main/Main";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Components/Layout";
-import Project1 from "./pages/Project1";
+import SpotifyProject from "./pages/SpotifyProject";
+import StocksProject from "./pages/StocksProject";
+import BotProject from "./pages/BotProject";
+import OtherProject from "./pages/OtherProject";
 
 const ContainerStyled = styled.div`
   font-family: "Montserrat", sans-serif;
@@ -42,10 +45,10 @@ function Container() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Main />} />
-            <Route path="spotify" element={<Project1 />} />
-            <Route path="trading" element={<Project1 />} />
-            <Route path="bot" element={<Project1 />} />
-            <Route path="other" element={<Project1 />} />
+            <Route path="spotify" element={<SpotifyProject />} />
+            <Route path="stocks" element={<StocksProject />} />
+            <Route path="bot" element={<BotProject />} />
+            <Route path="other" element={<OtherProject />} />
           </Route>
         </Routes>
       </BrowserRouter>

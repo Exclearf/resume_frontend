@@ -30,7 +30,7 @@ const Layout = () => {
       <nav>
         <Link to="/">About Me</Link>
         <Link to="spotify">Spotify [WIP]</Link>
-        <Link to="trading">Stocks [WIP]</Link>
+        <Link to="stocks">Stocks [WIP]</Link>
         <Link to="bot">TG Bot</Link>
         <Link to="other">Others</Link>
       </nav>

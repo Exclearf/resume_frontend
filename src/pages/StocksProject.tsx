@@ -2,7 +2,7 @@ import React from "react";
 import { motion, useIsPresent, useScroll, useSpring } from "framer-motion";
 import styled from "styled-components";
 
-const Project1Styled = styled.div`
+const StocksProjectStyled = styled.div`
   height: calc(100vh - 180px);
   width: 100%;
   overflow-y: scroll;
@@ -42,7 +42,7 @@ const Project1Styled = styled.div`
   }
 `;
 
-const Project1 = () => {
+const StocksProject = () => {
   const isPresent = useIsPresent();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -51,7 +51,7 @@ const Project1 = () => {
     restDelta: 0.001,
   });
   return (
-    <Project1Styled>
+    <StocksProjectStyled>
       <motion.div
         initial={{ scaleX: 1 }}
         animate={{
@@ -61,9 +61,9 @@ const Project1 = () => {
         style={{ originX: isPresent ? 0 : 1 }}
         className="screenChangeDiv"
       />
-      Project1 123
-    </Project1Styled>
+      StocksProject
+    </StocksProjectStyled>
   );
 };
 
-export default Project1;
+export default StocksProject;
