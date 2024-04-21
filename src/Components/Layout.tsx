@@ -5,25 +5,22 @@ import styled from "styled-components";
 import { motion, useIsPresent, useScroll, useSpring } from "framer-motion";
 const LayoutStyled = styled.div`
   grid-area: nav;
-  background-color: #d7d7d7;
   height: 100%;
   font-size: 1.2rem;
   nav {
-    height: 100%;
+    background-color: #d7d7d7;
+    height: 7dvh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
 
   @media only screen and (max-width: 600px) {
-    nav{
-        height: 10dvh;
-        text-align: center;
-        padding: 10px 15px 10px 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+    nav {
+      text-align: center;
+      padding: 10px 15px 10px 15px;
+      justify-content: center;
+      gap: 20px;
     }
   }
 `;

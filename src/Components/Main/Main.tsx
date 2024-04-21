@@ -4,7 +4,7 @@ import Section from "../Misc/Section";
 import { motion, useIsPresent } from "framer-motion";
 
 const MainStyled = styled.div`
-  height: calc(100dvh - 180px);
+  height: 93dvh;
   overflow-y: scroll;
   overflow-x: hidden;
   grid-area: main;
@@ -105,7 +105,6 @@ const MainStyled = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    height: 90dvh;
     padding: 50px 25px 50px 25px;
 
     /* Handle */
