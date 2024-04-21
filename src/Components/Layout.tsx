@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { motion, useIsPresent, useScroll, useSpring } from "framer-motion";
 const LayoutStyled = styled.div`
   grid-area: nav;
-  height: 100%;
+  height: 100dvh;
   font-size: 1.2rem;
   nav {
     background-color: #d7d7d7;
