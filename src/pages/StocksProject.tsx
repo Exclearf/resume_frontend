@@ -3,7 +3,7 @@ import { motion, useIsPresent, useScroll, useSpring } from "framer-motion";
 import styled from "styled-components";
 
 const StocksProjectStyled = styled.div`
-  height: calc(100vh - 180px);
+  height: calc(100dvh - 179px);
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -34,11 +34,43 @@ const StocksProjectStyled = styled.div`
   .screenChangeDiv {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 101%;
     background-color: #d7d7d7;
     top: 0;
     left: 0;
     z-index: 1;
+  }
+
+  .screenChangeDiv::after {
+    background-color: transparent;
+  }
+
+  @media only screen and (max-width: 600px) {
+    height: 90dvh;
+    padding: 50px 25px 50px 25px;
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #d7d7d7;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #9f9f9f;
+    }
+
+    & > div > div:first-child {
+      text-align: center;
+    }
+    & > div::after {
+      content: "";
+      position: absolute;
+      top: 45px;
+      left: 0px;
+      width: 100%;
+      height: 1px;
+      background-color: #36363e;
+    }
   }
 `;
 

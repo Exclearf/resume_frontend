@@ -18,7 +18,7 @@ const HeaderStyled = styled.div`
   @media only screen and (max-width: 600px) {
     padding-left: 0;
     justify-content: center;
-    height: 20vh;
+    height: 20dvh;
 
     .floatLeft{
       justify-content: center;

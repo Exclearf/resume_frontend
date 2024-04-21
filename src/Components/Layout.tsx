@@ -17,9 +17,12 @@ const LayoutStyled = styled.div`
 
   @media only screen and (max-width: 600px) {
     nav{
-        height: 10vh;
         text-align: center;
-        padding: 0px 10px 0px 10px;
+        padding: 10px 15px 10px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
     }
   }
 `;

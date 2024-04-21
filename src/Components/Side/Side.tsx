@@ -13,7 +13,7 @@ const SideStyled = styled.div`
     color: #525255;
     position: relative;
     padding: 80px 100px 0px 1.5vw;
-    height: calc(100vh - 160px);
+    height: calc(100dvh - 160px);
   }
 
   & a {

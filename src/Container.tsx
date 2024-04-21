@@ -22,12 +22,12 @@ const ContainerStyled = styled.div`
     "side nav"
     "side main";
   height: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   width: 100vw;
   overflow: hidden;
 
   @media only screen and (max-width: 600px) {
-    grid-template: 20vh 80vh 10vh 90vh / 1fr;
+    grid-template: 20dvh 80dvh 10dvh 90dvh / 1fr;
     grid-template-areas:
       "header"
       "side"

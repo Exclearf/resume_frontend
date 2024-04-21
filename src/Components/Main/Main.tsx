@@ -4,7 +4,7 @@ import Section from "../Misc/Section";
 import { motion, useIsPresent } from "framer-motion";
 
 const MainStyled = styled.div`
-  height: calc(100vh - 180px);
+  height: calc(100dvh - 180px);
   overflow-y: scroll;
   overflow-x: hidden;
   grid-area: main;
@@ -93,7 +93,7 @@ const MainStyled = styled.div`
   .screenChangeDiv {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 101%;
     background-color: #d7d7d7;
     top: 0;
     left: 0;
@@ -105,7 +105,7 @@ const MainStyled = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    height: 90vh;
+    height: 90dvh;
     padding: 50px 25px 50px 25px;
 
     /* Handle */
