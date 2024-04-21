@@ -19,6 +19,10 @@ const TitleStyled = styled.div<TitleStyledProps>`
   color: ${(props) => props.fontColor};
   border-bottom: ${(props) =>
     props.isUnderlined ? "2px rgba(253, 255, 252, 0.5) solid;" : "none"};
+
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+  }
 `;
 
 const Title: React.FC<TitleProps> = ({
