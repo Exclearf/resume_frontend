@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Section from "../Misc/Section";
 import { motion, useIsPresent } from "framer-motion";
+import { Separator } from "@radix-ui/react-separator";
 
 const MainStyled = styled.div`
   height: 93dvh;

@@ -78,12 +78,13 @@ const SideStyled = styled.div`
     .parent::after {
       top: -1px;
       border-top: solid 30px #36363e;
-      border-left: solid calc(0.5 * 100vw) transparent;
-      border-right: solid calc(0.5 * 100vw) transparent;
+      border-left: solid calc(0.5 * 110vw) transparent;
+      border-right: solid calc(0.5 * 110vw) transparent;
     }
 
     .parent {
-      padding: 60px 0px 60px 0px;
+      padding: 41px 0px 21px 0px;
+      gap: 30px;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -102,7 +103,7 @@ const SideStyled = styled.div`
 
     .skillsSection .secChildren {
       display: grid;
-      grid-template: repeat(4, 50px) / 1fr 1fr;
+      grid-template: repeat(4, 30px) / 1fr 1fr;
     }
 
     .skillsSection .secChildren > div {

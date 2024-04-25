@@ -3,6 +3,8 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import { motion, useIsPresent, useScroll, useSpring } from "framer-motion";
+import { Separator } from "@radix-ui/react-separator";
+
 const LayoutStyled = styled.div`
   grid-area: nav;
   height: 100dvh;
@@ -30,6 +32,7 @@ const Layout = () => {
     <LayoutStyled>
       <nav>
         <Link to="/">About Me</Link>
+        <Separator orientation="vertical" />
         <Link to="spotify">Spotify [WIP]</Link>
         <Link to="stocks">Stocks [WIP]</Link>
         <Link to="bot">TG Bot</Link>
