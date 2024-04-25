@@ -76,10 +76,11 @@ const SideStyled = styled.div`
 
   @media only screen and (max-width: 600px) {
     .parent::after {
+      width: 100dvw;
       top: -1px;
       border-top: solid 30px #36363e;
-      border-left: solid calc(0.5 * 110vw) transparent;
-      border-right: solid calc(0.5 * 110vw) transparent;
+      border-left: solid 50dvw transparent;
+      border-right: solid 50dvw transparent;
     }
 
     .parent {
@@ -90,6 +91,7 @@ const SideStyled = styled.div`
       justify-content: space-evenly;
       align-items: center;
       height: 80dvh;
+      width: 100dvw;
       border-bottom: 1px #36363e solid;
     }
 
